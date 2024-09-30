@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    display: flex;
+    height: 100vh;
+}
+
+#slides-container {
+    width: 75%;
+    overflow-y: scroll; /* Asegura la barra de desplazamiento */
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#slides {
+    display: flex;
+    flex-direction: column;
+}
+
+.slide {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    min-height: 300px; /* Aumenta la altura mínima para mejor delimitación */
+}
+
+#slide-image {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Ajusta la imagen para que ocupe todo el espacio */
+}
+
+.slide-img1 {
+    display: block; /* Hace que la imagen sea un bloque para que se aplique margin auto */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    width: 30%; /* Ajusta el tamaño de la imagen dentro de la diapositiva */
+    height: 40%; /* Mantiene la proporción de la imagen */
+}
+
+.slide-img2 {
+    display: block; /* Hace que la imagen sea un bloque para que se aplique margin auto */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    width: 50%; /* Ajusta el tamaño de la imagen dentro de la diapositiva */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Estilo para el párrafo */
+.styled-quote {
+    font-style: italic; /* Texto en cursiva */
+    font-size: 0.9em; /* Tamaño de la fuente */
+    color: #6b7a3d; /* Color del texto */
+    line-height: 1; /* Espacio entre líneas */
+    text-align: center; /* Centra el texto */
+    position: relative; /* Permite usar pseudo-elementos para las comillas */
+    margin: 20px 0; /* Espacio vertical alrededor del texto */
+    padding: 0 20px; /* Espacio horizontal dentro del párrafo */
+}
+
+/* Estilo para las comillas decorativas usando pseudo-elementos */
+.styled-quote::before {
+    content: '❝'; /* Comilla decorativa */
+    font-size: 2em; /* Tamaño de la comilla */
+    color: #8b4e2a; /* Color de la comilla */
+    position: absolute; /* Posiciona la comilla */
+    top: -0.5em; /* Ajusta la posición vertical */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición horizontal */
+}
+
+#image-container {
+    display: flex; /* Usar flexbox para alinear el contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    width: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible */
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+}
+
+#image-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
